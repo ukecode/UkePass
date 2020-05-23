@@ -3,14 +3,17 @@
     "name" : "UkePass",
     "version": "0.1",
     "description":"Salva suas senhas",
-  "icons": {"128":"./src/icon.png"},
-    "permissions" : ["activeTab"],
+    "icons": {"128":"./src/assets/icon.png"},
+    "permissions" : ["activeTab","tabs"],
+    "browser_action":{
+    "default_popup" : "./src/pages/popup.html"
+    },
     "content_scripts":[ 
     {
         "matches" : [
-            "http://localhost/aplicacoes/WebImage/"
+            "<all_urls>"
         ],
-        "js" : ["content.js"]
+        "js" : ["./src/content.js"]
     }
     ]
     }
