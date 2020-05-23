@@ -1,0 +1,16 @@
+{
+    "manifest_version" : 2,
+    "name" : "UkePass",
+    "version": "0.1",
+    "description":"Salva suas senhas",
+  "icons": {"128":"./src/icon.png"},
+    "permissions" : ["activeTab"],
+    "content_scripts":[ 
+    {
+        "matches" : [
+            "http://localhost/aplicacoes/WebImage/"
+        ],
+        "js" : ["content.js"]
+    }
+    ]
+    }
